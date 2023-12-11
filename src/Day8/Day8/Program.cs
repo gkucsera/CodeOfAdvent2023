@@ -19,6 +19,14 @@ var result = map.CountMoves(start, end, moves);
 stopWatch.Stop();
 
 Console.WriteLine($"first - {result} - {stopWatch.Elapsed.Seconds}:{stopWatch.Elapsed.Milliseconds}");
+
+
+stopWatch.Reset();
+stopWatch.Start();
+var multipleResult = map.CountMultipleMoves('A', 'Z', moves);
+Console.WriteLine($"second - {multipleResult} - {stopWatch.Elapsed.Seconds}:{stopWatch.Elapsed.Milliseconds}");
+stopWatch.Stop();
+
 return ;
 
 IEnumerable<MapEntry> CreateMap(IEnumerable<string> lines)
